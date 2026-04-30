@@ -1,4 +1,4 @@
-package at.spengergasse.spring_thymeleaf.controllers;
+package spring_thymeleaf.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 public class HelloController {
 
     @GetMapping("")
-    public  String index(Model model) {
+    public String index(Model model) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         model.addAttribute("today", LocalDate.now().format(dtf));
         return "index";
